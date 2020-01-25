@@ -15,7 +15,7 @@ func init() {
 func setupRouter() *gin.Engine {
 	r := gin.Default()
 
-	r.POST("/mqtt")
+	r.POST("/mqtt-broker")
 
 	return r
 }

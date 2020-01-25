@@ -1,0 +1,11 @@
+github.com/arangodb/go-driver v0.0.0-20200107125107-2a2392e62f69 h1:ktopUcFoST9deLqvSCt+Q2fXPcLrc89zagqEvbJun/0=
+github.com/arangodb/go-driver v0.0.0-20200107125107-2a2392e62f69/go.mod h1:zwIyITtzH8pltwhR5eDthDZlON7UJ4Nh16c7CcgOmj0=
+github.com/arangodb/go-velocypack v0.0.0-20190129082528-7896a965b4ad h1:Ah+VRYUWLuqgbfnDyuC8IrIe8XFzpt9tBVVnPGFNTJ8=
+github.com/arangodb/go-velocypack v0.0.0-20190129082528-7896a965b4ad/go.mod h1:7QCjpWXdB49P6fql1CxmsBWd8z/T4L4pqFLTnc10xNM=
+github.com/coreos/go-iptables v0.4.3/go.mod h1:/mVI274lEDI2ns62jHCDnCyBF9Iwsmekav8Dbxlm1MU=
+github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/dchest/uniuri v0.0.0-20160212164326-8902c56451e9/go.mod h1:GgB8SF9nRG+GqaDtLcwJZsQFhcogVCJ79j4EdT0c2V4=
+github.com/dgrijalva/jwt-go v3.2.0+incompatible/go.mod h1:E3ru+11k8xSBh+hMPgOLZmtrrCbhqsmaPHjLKYnJCaQ=
+github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
+github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=

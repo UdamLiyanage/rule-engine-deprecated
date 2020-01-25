@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/arangodb/go-driver"
 	"github.com/gin-gonic/gin"
+	"log"
 )
 
 var database driver.Database
@@ -20,5 +21,6 @@ func setupRouter() *gin.Engine {
 }
 
 func main() {
-	println("Main Function")
+	r := setupRouter()
+	log.Fatal(r.Run(":9000"))
 }

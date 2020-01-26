@@ -96,9 +96,9 @@ func compareRules(rules []map[string]string, payload map[string]string) bool {
 func executeAction(actionType string, action map[string]string) {
 	switch actionType {
 	case "mqtt_publish":
-		fmt.Println("MQTT Publish")
+		publish(action)
 	case "url_call":
-		fmt.Println("URL Call")
+		urlCall(action)
 	default:
 		fmt.Println("Log to DB")
 	}

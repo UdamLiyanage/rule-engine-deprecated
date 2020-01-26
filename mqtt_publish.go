@@ -15,7 +15,7 @@ func publish(config, payload map[string]string) {
 	if token := c.Connect(); token.Wait() && token.Error() != nil {
 		panic(token.Error())
 	}
-	token := c.Publish(config["topic"], 0, false, payload)
+	token := c.Publish(config["topic"], 0, false, "test-success")
 	res := token.WaitTimeout(2 * time.Second)
 	if res {
 		fmt.Println("Success")

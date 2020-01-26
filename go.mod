@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/arangodb/go-driver v0.0.0-20200107125107-2a2392e62f69
-	github.com/eclipse/paho.mqtt.golang v1.2.0 // indirect
+	github.com/eclipse/paho.mqtt.golang v1.2.0
 	github.com/gin-gonic/gin v1.5.0
 	github.com/go-playground/universal-translator v0.17.0 // indirect
 	github.com/json-iterator/go v1.1.9 // indirect

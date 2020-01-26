@@ -15,7 +15,7 @@ func inferRules(c *gin.Context) {
 	if err != nil {
 		panic(err)
 	}
-	rules := getRules("test_serial")
+	rules := getRules(payload["serial"])
 	for _, rule := range rules {
 		if compareRules(rule.Rules, payload) {
 			executeAction(rule.Type, rule.Action, rule.Payload)

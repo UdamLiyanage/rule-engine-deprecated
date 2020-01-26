@@ -18,7 +18,7 @@ func inferRules(c *gin.Context) {
 	rules := getRules("test_serial")
 	for _, rule := range rules {
 		if compareRules(rule.Rules, payload) {
-			executeAction(rule.Type, rule.Action)
+			executeAction(rule.Type, rule.Action, rule.Payload)
 		}
 	}
 	c.Status(200)
@@ -93,12 +93,12 @@ func compareRules(rules []map[string]string, payload map[string]string) bool {
 	return match
 }
 
-func executeAction(actionType string, action map[string]string) {
+func executeAction(actionType string, action, payload map[string]string) {
 	switch actionType {
 	case "mqtt_publish":
-		publish(action)
+		publish(action, payload)
 	case "url_call":
-		urlCall(action)
+		urlCall(action, payload)
 	default:
 		fmt.Println("Log to DB")
 	}

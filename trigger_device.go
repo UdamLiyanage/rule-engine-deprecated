@@ -8,16 +8,22 @@ import (
 func triggerDevice(states State, payload map[string]string, key string) []byte {
 	current := states.Current
 	trigger := ""
-	for _, v := range states.Possible {
-		if v != current {
-			trigger = v
-			break
+	length := len(states.Possible) - 1
+	for k, v := range states.Possible {
+		if v == current {
+			if k+1 > length {
+				trigger = states.Possible[0]
+				break
+			} else {
+				trigger = states.Possible[k+1]
+				break
+			}
 		}
 	}
 	states.Current = trigger
 	updateDatabase(&states, key)
 
-	for k, _ := range payload {
+	for k := range payload {
 		payload[k] = trigger
 	}
 

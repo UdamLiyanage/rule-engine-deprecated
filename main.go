@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/arangodb/go-driver"
 	"github.com/gin-gonic/gin"
+	_ "github.com/joho/godotenv/autoload"
 	"log"
 )
 

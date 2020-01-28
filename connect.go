@@ -4,24 +4,25 @@ import (
 	"context"
 	driver "github.com/arangodb/go-driver"
 	"github.com/arangodb/go-driver/http"
+	"os"
 )
 
 func databaseConnect() {
 	conn, err := http.NewConnection(http.ConnectionConfig{
-		Endpoints: []string{"http://13.57.187.149:8529"},
+		Endpoints: []string{os.Getenv("ARANGODB_URL")},
 	})
 	if err != nil {
 		panic(err)
 	}
 	c, err := driver.NewClient(driver.ClientConfig{
 		Connection:     conn,
-		Authentication: driver.BasicAuthentication("udam", "Udam1998"),
+		Authentication: driver.BasicAuthentication(os.Getenv("ARANGODB_USERNAME"), os.Getenv("ARANGODB_PASSWORD")),
 	})
 	if err != nil {
 		panic(err)
 	}
 
-	database, err = c.Database(context.TODO(), "Devices")
+	database, err = c.Database(context.TODO(), os.Getenv("ARANGODB_DATABASE"))
 	if err != nil {
 		panic(err)
 	}

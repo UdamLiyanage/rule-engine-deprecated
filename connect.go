@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/tls"
 	driver "github.com/arangodb/go-driver"
 	"github.com/arangodb/go-driver/http"
 	"os"
@@ -10,6 +11,7 @@ import (
 func databaseConnect() {
 	conn, err := http.NewConnection(http.ConnectionConfig{
 		Endpoints: []string{os.Getenv("ARANGODB_URL")},
+		TLSConfig: &tls.Config{InsecureSkipVerify: true},
 	})
 	if err != nil {
 		panic(err)
